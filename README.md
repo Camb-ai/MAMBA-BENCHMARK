@@ -1,15 +1,5 @@
 <p align="center">
-  <a href="https://camb.ai">
-    <img src="assets/logo.png" alt="Camb.ai" width="60" />
-  </a>
-</p>
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg">
-    <img src="assets/banner-dark.svg" alt="MARS8" width="100%" />
-  </picture>
+  <img src="./assets/banner.jpg" alt="MARS8 Benchmark Results" width="100%" />
 </p>
 
 <p align="center">
@@ -81,9 +71,9 @@ Evaluated head-to-head against leading TTS systems — **Cartesia Sonic-3**, **E
 
 ## Benchmark
 
-### TeaserTTS: A Realistic Dubbing Stress Test
+### TeaserTTS: A Real-World Stress Test
 
-The **TeaserTTS Benchmark** evaluates TTS systems under real-world dubbing constraints, not idealized studio conditions.
+The **TeaserTTS Benchmark** evaluates TTS systems under the toughest real-world conditions, not idealized studio scenarios.
 
 | Statistic | Value |
 |:----------|:-----:|
