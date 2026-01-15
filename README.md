@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/banner.jpg" alt="MARS8 Benchmark Results" width="100%" />
+  <img src="./assets/banner.jpg" alt="MARS8 Benchmark Results" width="90%" />
 </p>
 
 <p align="center">
