@@ -147,7 +147,7 @@ If you use this benchmark in your research, please cite:
   author  = {Camb.ai},
   year    = {2026},
   note    = {Evaluated on the MAMBA Benchmark},
-  url     = {https://github.com/Camb-ai/MAMBA}
+  url     = {https://github.com/Camb-ai/MAMBA-BENCHMARK}
 }
 ```
 
