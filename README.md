@@ -71,9 +71,9 @@ Evaluated head-to-head against leading TTS systems — **Cartesia Sonic-3**, **E
 
 ## Benchmark
 
-### TeaserTTS: A Real-World Stress Test
+### MAMBA: The "Kobe Bryant" of Speech Benchmarks
 
-The **TeaserTTS Benchmark** evaluates TTS systems under the toughest real-world conditions, not idealized studio scenarios.
+The **MAMBA Benchmark** evaluates TTS systems under the toughest real-world conditions, not idealized studio scenarios.
 
 | Statistic | Value |
 |:----------|:-----:|
@@ -86,9 +86,9 @@ The **TeaserTTS Benchmark** evaluates TTS systems under the toughest real-world 
 
 <br>
 
-### Why TeaserTTS?
+### Why MAMBA?
 
-Traditional TTS benchmarks rely on clean, long-form reference audio in controlled conditions. TeaserTTS challenges this by introducing:
+Traditional TTS benchmarks rely on clean, long-form reference audio in controlled conditions. MAMBA challenges this by introducing:
 
 - **Cross-language voice cloning** — 70% of samples require cloning across different languages, testing pronunciation robustness and identity preservation
 - **Ultra-short references** — Average reference duration of just 2.3 seconds mirrors real-world constraints
@@ -142,7 +142,8 @@ If you use this benchmark in your research, please cite:
   title   = {MARS8: State-of-the-art Text-to-Speech with Minimal Reference Audio},
   author  = {Camb.ai},
   year    = {2026},
-  url     = {https://github.com/Camb-ai/TeaserTTS-benchmark}
+  note    = {Evaluated on the MAMBA Benchmark},
+  url     = {https://github.com/Camb-ai/MambaTTS}
 }
 ```
 
