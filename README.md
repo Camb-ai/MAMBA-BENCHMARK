@@ -71,9 +71,13 @@ Evaluated head-to-head against leading TTS systems — **Cartesia Sonic-3**, **E
 
 ## Benchmark
 
-### MAMBA: The "Kobe Bryant" of Speech Benchmarks
+### MAMBA: The "Kobe Bryant" of TTS Benchmarks
 
-The **MAMBA Benchmark** evaluates TTS systems under the toughest real-world conditions, not idealized studio scenarios.
+To validate these claims, we developed the **MAMBA Benchmark**, a rigorous stress test designed to reflect the most demanding real-world conditions, rather than idealized studio environments.
+
+The name *MAMBA* is intentional. Our team at CAMB deeply resonates with the mamba mentality: a relentless commitment to excellence, discipline, and continuous improvement. Kobe Bryant's legacy stands as a powerful testament to what sustained hard work and focus can achieve, even when starting as an underdog. In the same spirit, the MAMBA Benchmark embodies difficulty by design, prioritizing the hardest cases, not the easiest ones.
+
+Today, we are open-sourcing the MAMBA Benchmark so the broader community can independently replicate and validate our results. Our goal is for MAMBA to serve not only as a transparent validation framework for our own models, but also as a durable, industry-grade benchmark against which future TTS systems can be evaluated.
 
 | Statistic | Value |
 |:----------|:-----:|
@@ -143,7 +147,7 @@ If you use this benchmark in your research, please cite:
   author  = {Camb.ai},
   year    = {2026},
   note    = {Evaluated on the MAMBA Benchmark},
-  url     = {https://github.com/Camb-ai/MambaTTS}
+  url     = {https://github.com/Camb-ai/MAMBA}
 }
 ```
 
