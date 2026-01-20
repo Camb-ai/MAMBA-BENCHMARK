@@ -10,8 +10,10 @@
   <a href="#overview"><img src="https://img.shields.io/badge/Overview-EC5512?style=flat-square" alt="Overview"></a>&nbsp;
   <a href="#performance"><img src="https://img.shields.io/badge/Performance-EC5512?style=flat-square" alt="Performance"></a>&nbsp;
   <a href="#benchmark"><img src="https://img.shields.io/badge/Benchmark-EC5512?style=flat-square" alt="Benchmark"></a>&nbsp;
+  <a href="#getting-started"><img src="https://img.shields.io/badge/Getting_Started-EC5512?style=flat-square" alt="Getting Started"></a>&nbsp;
   <a href="#methodology"><img src="https://img.shields.io/badge/Methodology-EC5512?style=flat-square" alt="Methodology"></a>&nbsp;
-  <a href="#citation"><img src="https://img.shields.io/badge/Citation-EC5512?style=flat-square" alt="Citation"></a>
+  <a href="#citation"><img src="https://img.shields.io/badge/Citation-EC5512?style=flat-square" alt="Citation"></a>&nbsp;
+  <a href="https://discord.com/channels/1107565548864290840/1248653326946406421"><img src="https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Discord"></a>
 </p>
 
 <br>
@@ -58,8 +60,8 @@ Evaluated head-to-head against leading TTS systems — **Cartesia Sonic-3**, **E
 
 | Metric | MARS8-Pro | MARS8-Flash | Sonic-3 | Speech-2.6-HD | Multilingual v2 | Multilingual v3 |
 |:-------|:---------:|:-----------:|:-------:|:-------------:|:---------------:|:---------------:|
-| **WavLM** ↑ | **0.8676** | 0.8666 | 0.8420 | 0.8666 | 0.8109 | 0.8253 |
-| **CAM++** ↑ | **0.7097** | 0.7066 | 0.5134 | 0.5878 | 0.3912 | 0.336 |
+| **Wavlm-base-sv (cosine similarity)** ↑ | **0.8676** | 0.8666 | 0.8420 | 0.8666 | 0.8109 | 0.8253 |
+| **CAM++ embedding (cosine similarity)** ↑ | **0.7097** | 0.7066 | 0.5134 | 0.5878 | 0.3912 | 0.336 |
 
 </details>
 
@@ -100,6 +102,60 @@ Traditional TTS benchmarks rely on clean, long-form reference audio in controlle
 
 <br>
 
+## Getting Started
+
+### Prerequisites
+
+1. **Create a Camb.ai account** — Sign up at [camb.ai](https://camb.ai) and generate an API key from your dashboard.
+
+2. **Install FFmpeg**
+
+   ```bash
+   # Ubuntu/Debian
+   apt update && apt install -y ffmpeg
+
+   # macOS
+   brew update && brew install ffmpeg
+
+   # Windows
+   winget install ffmpeg
+   ```
+
+3. **Set up Python environment**
+
+   ```bash
+   python3 -m venv venv
+   source ./venv/bin/activate  # Linux/macOS
+   # or
+   .\venv\Scripts\activate     # Windows
+   ```
+
+### Installation
+
+```bash
+pip install -r requirements.txt
+```
+
+### Running the Benchmark
+
+**Step 1: Load audio data**
+
+```bash
+python load_audio.py
+```
+
+This downloads and extracts audio from the sources defined in `teasers.json`.
+
+**Step 2: Clean and segment audio**
+
+```bash
+python load_segments.py
+```
+
+This removes background noise using UVR-MDX-NET and splits audio into segments based on subtitle timing. Cleaned segments are saved to `./segments/`.
+
+<br>
+
 ## Results
 
 MARS8 demonstrates consistent superiority across the evaluation dimensions that matter most for production deployments:
@@ -109,7 +165,7 @@ MARS8 demonstrates consistent superiority across the evaluation dimensions that 
 | **Minimal reference requirements** | High-fidelity cloning from 2s audio |
 | **Cross-language robustness** | Strong performance on 70% cross-lingual test set |
 | **Pronunciation accuracy** | 5.67% CER on multilingual content |
-| **Speaker identity preservation** | 0.87 WavLM / 0.71 CAM++ similarity scores |
+| **Speaker identity preservation** | 0.87 Wavlm-base-sv / 0.71 CAM++ embedding similarity scores |
 
 <br>
 
@@ -119,7 +175,7 @@ All evaluations follow standardized protocols to ensure reproducibility:
 
 | Metric | Method |
 |:-------|:-------|
-| **Speaker similarity** | WavLM and CAM++ speaker verification models |
+| **Speaker similarity** | Wavlm-base-sv (cosine similarity) and CAM++ embedding (cosine similarity) speaker verification models |
 | **Transcription accuracy** | Character Error Rate (CER) via Whisper ASR |
 | **Quality assessment** | CE and PQ scores via Facebook audio-aesthetics model |
 
