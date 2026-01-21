@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <strong>State-of-the-art voice cloning from 2-second references</strong>
+  <strong>MARS8: The world's first family of TTS models</strong>
 </p>
 
 <p align="center">
